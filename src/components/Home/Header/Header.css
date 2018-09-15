@@ -36,3 +36,24 @@
   font-weight: 400;
   margin-left: 10px;
 }
+
+.welcome2 {
+  animation-name: grow;
+  animation-duration: 600ms;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier();
+  animation-fill-mode: forwards;
+  /* transform: rotate(3deg); */
+   /* transform: rotate(0.3rad);/ */
+   /* transform: rotate(3grad); */ 
+   /* transform: rotate(.03turn);  */
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}

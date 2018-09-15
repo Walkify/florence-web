@@ -8,13 +8,15 @@ export default class Home extends Component {
     return (
       <div>
         <Header />
+        <div className="sep-1" />
         <Explain />
+        
         <div className="homeContainer">
           <div className="welcome">
             <div className="logoImage">
             </div>
             <div className="logoText">
-              <em>Get Started</em>
+              <em>Get Started:</em>
             </div>
           </div>
         </div>
