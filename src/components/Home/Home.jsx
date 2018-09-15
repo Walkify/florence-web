@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './Home.css'
-import Header from './Header/Header'
-import Explain from './Explain/Explain'
+import Header from './Header'
+import Explain from './Explain'
 
 export default class Home extends Component {
   render() {
