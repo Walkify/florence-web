@@ -9,7 +9,7 @@ export default class Explain extends Component {
         <div className="explainContainer">
           <div className="explainContent">
             <h2>How it Works</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Walkify allows you to navigate the world without a connection to the internet. Get walking or driving directions from anywhere to anywhere, or ask for help simply by sending a text. Sign in with you phone number and communicate with our navigation assistant but typing in an address. Want us to call an uber for you? Just let us know.</p>
           </div>
           <div className="iphone">
           <img src={iphone} alt="iphone" />
