@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Home.css'
-import { Account, Header, Explain } from './components'
+import { Header, Explain } from './components'
 
 export default class Home extends Component {
   render() {
@@ -19,7 +19,6 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        <Account />
       </div>
     )
   }
