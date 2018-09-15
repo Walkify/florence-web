@@ -6,17 +6,14 @@
 }
 
 .welcome {
-  background: linear-gradient(90deg, rgba(0,9,36,1) 0%, rgba(188,250,156,1) 0%, rgb(71, 215, 222) 100%);
-  width: 50%;
-  height: 30%;
+  background: linear-gradient(-45deg, rgba(0,9,36,1) 0%, rgba(75,183,252,1) 0%, rgb(147,100,251) 100%);
+  width: 70%;
+  height: 300px;
   padding: 30px;
   border-radius: .6em;
   color: #fff;
   font-family: -apple-system,BlinkMacSystemFont,sans-serif,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial;
   font-size: 40px;
   transition: all .6s cubic-bezier(0,.5,.51,1);
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 50px;
 }

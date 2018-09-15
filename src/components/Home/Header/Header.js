@@ -14,6 +14,9 @@ export default class Header extends Component {
             <p><em>Walkify</em></p>
           </div>
         </div>
+        <div className="slogan">
+          <p>Navigate the world through SMS.<br /> No data, no problem.</p>
+        </div>
       </div>
     )
   }
