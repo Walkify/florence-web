@@ -68,3 +68,22 @@
     height: 1000px;
   }
 }
+
+.iphone {
+  animation-name: fade;
+  animation-duration: 1500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0,.51,.1,1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translate(0px, 100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
