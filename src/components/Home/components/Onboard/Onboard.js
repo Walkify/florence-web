@@ -6,7 +6,7 @@ export default class Onboard extends Component {
     return (
       <div className="homeContainer">
         <div className="welcome">
-          <em>Get Started:</em>
+          <em>How it Works:</em>
           <div className="instructions">
             <div className="instruction">
               <h3>1.</h3>
