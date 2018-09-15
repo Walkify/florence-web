@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Home.css'
-import { Header, Explain, Footer, Onboard } from './components'
+import { Account, Header, Explain, Footer, Onboard } from './components'
+
 
 export default class Home extends Component {
   render() {
@@ -10,6 +11,7 @@ export default class Home extends Component {
         <div className="sep-1" />
         <Explain />
         <Onboard />
+        <Account />
         <Footer />
       </React.Fragment>
     )
