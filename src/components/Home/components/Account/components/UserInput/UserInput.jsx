@@ -22,6 +22,7 @@ export default class UserInput extends Component {
       "phoneNumber": this.state.number,
     })
     event.preventDefault();
+    this.setState({number: ''})
   }
 
   handleChange(event) {
@@ -43,7 +44,7 @@ export default class UserInput extends Component {
                 <input
                   className="phoneInput"
                   type="text"
-                  value={this.state.value}
+                  value={this.state.number}
                   onChange={this.handleChange}
                 />
                 <input className="submitButton" type="submit" value="Submit" />
