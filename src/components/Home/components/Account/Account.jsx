@@ -46,7 +46,7 @@ export default class Account extends Component {
     return (
       <div className="Account">
         {localStorage.getItem(firebaseAuthKey) === null && <Login handleGoogleLogin={this.handleGoogleLogin} />}
-        {localStorage.getItem(firebaseAuthKey) === "1" && <UserInput />}        
+        {localStorage.getItem(firebaseAuthKey) === "1" && <UserInput uberDisabled={this.props.uberDisabled} />}        
       </div>
     )
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Explain.css'
-import iphone from './x.gif'
+import iphone from './walkify.gif'
 
 export default class Explain extends Component {
   render() {

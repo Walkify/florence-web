@@ -29,6 +29,7 @@ export default class UserInput extends Component {
 
   render() {
     const { handleGoogleLogin } = this.props
+    const buttonMessage = this.props.uberDisabled ? "Sign in to Uber" : "Authorized!"
     return (
       <div className="">
         <div className="homeContainer">
