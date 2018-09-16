@@ -3,7 +3,7 @@ import './Home.css'
 import { Account, Header, Explain, Footer, Onboard } from './components'
 
 
-export default class Home extends Component {
+class Home extends Component {
   componentDidMount() {
     const firebaseAuthKey = "firebaseAuthInProgress";
     if (localStorage.getItem(firebaseAuthKey) === "1" ) {
@@ -12,20 +12,28 @@ export default class Home extends Component {
   }
   constructor() {
     super()
+    const uberCode = window.location.href.split('/').slice(-1).pop() ? 
+      window.location.href.split('/').slice(-1).pop().substr(6) : null
+
     this.state = {
       auth: false,
+      uberCode
     }
+    debugger
   }
   render() {
+    const { uberCode } = this.state 
     return (
       <React.Fragment>
         <Header />
         <div className="sep-1" />
         <Explain />
         {!this.state.auth && <Onboard />}
-        <Account />
+        <Account uberDisabled={!uberCode} />
         <Footer />
       </React.Fragment>
     )
   }
 }
+
+export default Home
