@@ -21,14 +21,16 @@ class Home extends Component {
     if (localStorage.getItem(firebaseAuthKey) === "1") {
       let userId = localStorage.getItem('appToken');
       await fire.database().ref('/users/'+userId).once('value').then((uid) => {
+        if(uid.val()){
         const data = uid.val().uber
         const access_token = data && data.access_token ? data.access_token.access_token : null
         const auth_code = data && data.auth_code ? data.auth_code : null
         this.setState({access_token, auth_code});
+        }
       })
       const auth_code = window.location.href.split('/').slice(-1).pop() ? 
       window.location.href.split('/').slice(-1).pop().substr(6) : null
-      if(!this.state.access_token && auth_code) {
+      if(!this.state.access_token || auth_code) {
         fire.database().ref('users/' + localStorage.getItem('appToken') + '/uber').set({
           access_token: null,
           auth_code,
