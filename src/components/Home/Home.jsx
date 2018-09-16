@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Home.css'
 import { Account, Header, Explain, Footer, Onboard } from './components'
+import { fire } from "../../config/constants";
 
 
 class Home extends Component {
@@ -14,12 +15,13 @@ class Home extends Component {
     super()
     const uberCode = window.location.href.split('/').slice(-1).pop() ? 
       window.location.href.split('/').slice(-1).pop().substr(6) : null
-
+      fire.database().ref('users/' + localStorage.getItem('appToken')).set({
+      uberAccess: 'uberCode',
+    })
     this.state = {
       auth: false,
       uberCode
     }
-    debugger
   }
   render() {
     const { uberCode } = this.state 
