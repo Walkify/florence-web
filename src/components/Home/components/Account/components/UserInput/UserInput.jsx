@@ -1,18 +1,23 @@
 import React, { Component } from 'react'
 import './UserInput.css'
 
+const firebaseAuthKey = "firebaseAuthInProgress";
+
 export default class UserInput extends Component {
   constructor(props) {
     super(props);
     this.state = {
       number: null,
+      uberAuth: false,
     }
     this.submitNumber = this.submitNumber.bind(this);
+    this.submitUberw
     this.handleChange = this.handleChange.bind(this);
   }
 
   submitNumber(event) {
     console.log(this.state.number)
+    console.log(localStorage.getItem(firebaseAuthKey));
     event.preventDefault();
   }
 
@@ -42,7 +47,7 @@ export default class UserInput extends Component {
             </div>
             <div className="rightAuth">
               <label>Uber Sign In:</label><br />
-              <button className="submitButton">Sign in to Uber</button>
+              <button href="#" className={this.state.uberAuth ? "completedButton" : "submitButton"}>{this.state.uberAuth ? "Signed in already" : "Sign in to Uber"}</button>
             </div>
           </div>
         </div>
