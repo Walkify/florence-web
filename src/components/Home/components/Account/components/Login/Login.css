@@ -1,0 +1,28 @@
+.loginContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.signInButton {
+  outline: none;
+  padding-right: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgba(75,183,252,1);
+  border: solid 2px rgba(75,183,252,1);
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  transition: all .26s cubic-bezier(0,.5,.51,1);
+  background-color: #fff;
+  border-radius: 1.5em;
+  padding: 10px 18px 10px 18px;
+  letter-spacing: 0.9px;
+  transform: translate(0px, 20px)
+}
+
+.signInButton:hover {
+  background: linear-gradient(-45deg, rgba(0,9,36,1) 0%, rgba(75,183,252,1) 0%, rgb(131, 82, 236) 100%);
+  color: #fff;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.06);
+  border: solid 2px rgba(75,183,252,0);
+}
