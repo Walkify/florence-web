@@ -20,7 +20,8 @@ class Home extends Component {
     this.state = {
       auth: false,
       auth_code,
-      uberToken: null
+      uberToken: null,
+      access_token: null,
     }
   }
   async componentDidMount() {
@@ -32,12 +33,12 @@ class Home extends Component {
       let userId = localStorage.getItem('appToken');
       let uberToken = null; 
       fire.database().ref('/users/'+userId).once('value').then((uid) => this.setState({
-        uberToken: uid.node_.children_.root_.value.value_ || false})); //access_token
+        access_token: uid.val().uber.access_token.access_token || false}));
       
     }
   }
   render() {
-    const { auth_code, uberToken } = this.state 
+    const { access_token } = this.state 
 
     return (
       <React.Fragment>
@@ -45,7 +46,7 @@ class Home extends Component {
         <div className="sep-1" />
         <Explain />
         {!this.state.auth && <Onboard />}
-        <Account uberDisabled={!uberToken} />
+        <Account uberDisabled={!access_token} />
         <Footer />
       </React.Fragment>
     )
