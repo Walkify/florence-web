@@ -13,28 +13,30 @@ class Home extends Component {
   }
   constructor() {
     super()
-    const uberCode = window.location.href.split('/').slice(-1).pop() ? 
+    const auth_code = window.location.href.split('/').slice(-1).pop() ? 
       window.location.href.split('/').slice(-1).pop().substr(6) : null
     
-    if(uberCode) {
-      fire.database().ref('users/' + localStorage.getItem('appToken')).set({
-        uberAccess: uberCode,
+    if(auth_code) {
+      fire.database().ref('users/' + localStorage.getItem('appToken') + '/uber').set({
+        access_token: null,
+        auth_code,
+        redirect_uri: window.location.href.split('?code')[0]
       })
     }
     this.state = {
       auth: false,
-      uberCode
+      auth_code
     }
   }
   render() {
-    const { uberCode } = this.state 
+    const { auth_code } = this.state 
     return (
       <React.Fragment>
         <Header />
         <div className="sep-1" />
         <Explain />
         {!this.state.auth && <Onboard />}
-        <Account uberDisabled={!uberCode} />
+        <Account uberDisabled={!auth_code} />
         <Footer />
       </React.Fragment>
     )
