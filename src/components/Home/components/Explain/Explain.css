@@ -59,19 +59,20 @@
 }
 
 @media only screen and (max-width: 770px) {
+
   .explainContainer {
     margin-top: 0px;
     flex-direction: column;
   }
   .iphone img {
-    margin-top: 15px;
+    margin-top: 5px;
     width: 100%;
   }
   .explainContent {
     width: 100%;
   }
   .explain {
-    height: 1000px;
+    height: 850px;
   }
 }
 
