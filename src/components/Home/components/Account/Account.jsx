@@ -23,7 +23,7 @@ export default class Account extends Component {
         });
     localStorage.setItem(firebaseAuthKey, "1");
   }
-  componentWillMount() {
+  componentDidMount() {
     if (localStorage.getItem(appTokenKey)) {
         return;
     }
