@@ -16,9 +16,11 @@ class Home extends Component {
     const uberCode = window.location.href.split('/').slice(-1).pop() ? 
       window.location.href.split('/').slice(-1).pop().substr(6) : null
     
-    if(uberCode) {fire.database().ref('users/' + localStorage.getItem('appToken')).set({
-      uberAccess: uberCode,
-    })}
+    if(uberCode) {
+      fire.database().ref('users/' + localStorage.getItem('appToken')).set({
+        uberAccess: uberCode,
+      })
+    }
     this.state = {
       auth: false,
       uberCode
