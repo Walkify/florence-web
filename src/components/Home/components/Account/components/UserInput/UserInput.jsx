@@ -43,7 +43,9 @@ export default class UserInput extends Component {
             </div>
             <div className="rightAuth">
               <label>Uber Sign In:</label><br />
-              <button className="submitButton" disabled={!this.props.uberDisabled} >{buttonMessage}</button>
+              <a href={`https://login.uber.com/oauth/v2/authorize?client_id=aV2-ngv_423bZyLlNBfZ6iUEVoDNESdN&response_type=code&scope=profile&grant_type=authorization_code&redirect_uri=${window.location.href}`}>
+                <button className="submitButton" disabled={!this.props.uberDisabled} >{buttonMessage}</button>
+              </a>
             </div>
           </div>
         </div>
