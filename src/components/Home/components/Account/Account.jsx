@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Login, UserInput} from './components'
-import {firebaseAuth, loginWithGoogle} from "../../../../config/constants";
+import {fire, firebaseAuth, loginWithGoogle} from "../../../../config/constants";
 
 const firebaseAuthKey = "firebaseAuthInProgress";
 const appTokenKey = "appToken";
@@ -31,9 +31,10 @@ export default class Account extends Component {
     firebaseAuth().onAuthStateChanged(user => {
       if (user) {
         console.log("User signed in: ", JSON.stringify(user));
-
-        localStorage.removeItem(firebaseAuthKey);
-
+        // fire.database().ref('users/' + localStorage.getItem(appTokenKey) + '').set({
+        //   "full_name": user.full_name
+        // })
+        
         // here you could authenticate with you web server to get the
         // application specific token so that you do not have to
         // authenticate with firebase every time a user logs in
@@ -42,11 +43,10 @@ export default class Account extends Component {
     });
   }
   render() {
-    console.log(firebaseAuthKey + "=" + localStorage.getItem(firebaseAuthKey));
     return (
       <div className="Account">
-        {localStorage.getItem(firebaseAuthKey) === null && <Login handleGoogleLogin={this.handleGoogleLogin} />}
-        {localStorage.getItem(firebaseAuthKey) === "1" && <UserInput uberDisabled={this.props.uberDisabled} />}        
+        {localStorage.getItem(appTokenKey) === null && <Login handleGoogleLogin={this.handleGoogleLogin} />}
+        {localStorage.getItem(appTokenKey) !== null && <UserInput uberDisabled={this.props.uberDisabled} />}        
       </div>
     )
   }

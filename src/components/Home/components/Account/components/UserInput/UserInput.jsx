@@ -52,7 +52,7 @@ export default class UserInput extends Component {
             </div>
             <div className="rightAuth">
               <label>Uber Sign In:</label><br />
-              <a href={`https://login.uber.com/oauth/v2/authorize?client_id=aV2-ngv_423bZyLlNBfZ6iUEVoDNESdN&response_type=code&scope=profile&grant_type=authorization_code&redirect_uri=${window.location.href}`}>
+              <a href={`https://login.uber.com/oauth/v2/authorize?response_type=code&client_id=aV2-ngv_423bZyLlNBfZ6iUEVoDNESdN&scope=all_trips+delivery+history+history_lite+places+profile+request+request_receipt+ride_widgets&redirect_uri=${window.location.href}`}>
                 <button className={!uberDisabled ? "completedButton" : "submitButton"}>{!uberDisabled ? "Signed in already" : "Sign in to Uber"}</button>
               </a>
             </div>
