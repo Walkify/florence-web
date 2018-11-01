@@ -1,6 +1,6 @@
 
 .sep-1 {
-  height: 5px;
+  height: 10px;
   width: 100%;
   background: linear-gradient(-45deg, rgba(253,240,147,1), rgb(253,117,81), rgba(253,240,147,1), rgb(253,117,81));
 	background-size: 400% 400%;
